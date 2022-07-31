@@ -4,7 +4,7 @@
 		<title>three.js webgl - animation - keyframes</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="./dist/main.css">
+		<link type="text/css" rel="stylesheet" href="../css/main.css">
 		<style>
 			body {
 				background-color: #bfe3dd;
@@ -22,9 +22,9 @@
 		<div id="container"></div>
 
 		<div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - animation - keyframes<br/>
-			Model: <a href="https://artstation.com/artwork/1AGwX" target="_blank" rel="noopener">Littlest Tokyo</a> by
-			<a href="https://artstation.com/glenatron" target="_blank" rel="noopener">Glen Fox</a>, CC Attribution.
+			<a href="../index.html">
+				<button>Click Me</button>
+			</a>
 		</div>
 
 		<!-- Import maps polyfill -->
@@ -34,7 +34,7 @@
 		<script type="importmap">
 			{
 				"imports": {
-					"three": "./dist/js/three.module.js"
+					"three": "../js/three.module.js"
 				}
 			}
 		</script>
@@ -43,13 +43,13 @@
 
 			import * as THREE from 'three';
 
-			import Stats from './dist/jsm/libs/stats.module.js';
+			import Stats from '../jsm/libs/stats.module.js';
 
-			import { OrbitControls } from './dist/jsm/controls/OrbitControls.js';
-			import { RoomEnvironment } from './dist/jsm/environments/RoomEnvironment.js';
+			import { OrbitControls } from '../jsm/controls/OrbitControls.js';
+			import { RoomEnvironment } from '../jsm/environments/RoomEnvironment.js';
 
-			import { GLTFLoader } from './dist/jsm/loaders/GLTFLoader.js';
-			import { DRACOLoader } from './dist/jsm/loaders/DRACOLoader.js';
+			import { GLTFLoader } from '../jsm/loaders/GLTFLoader.js';
+			import { DRACOLoader } from '../jsm/loaders/DRACOLoader.js';
 
 			let mixer;
 
@@ -81,11 +81,11 @@
 			controls.enableDamping = true;
 
 			const dracoLoader = new DRACOLoader();
-			dracoLoader.setDecoderPath( './dist/js/draco-gltf/' );
+			dracoLoader.setDecoderPath( '../js/draco-gltf/' );
 
 			const loader = new GLTFLoader();
 			loader.setDRACOLoader( dracoLoader );
-			loader.load( './dist/models/LittlestTokyo.glb', function ( gltf ) {
+			loader.load( '../models/Horse.glb', function ( gltf ) {
 
 				const model = gltf.scene;
 				model.position.set( 1, 1, 0 );
