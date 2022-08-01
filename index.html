@@ -26,6 +26,7 @@
 			<a href="./pages/index.org.html">
 				<button>Click Me</button>
 			</a>
+			<button onclick="myFunction()">Click me to back to home</button>
 		</div>
 
 		<!-- Import maps polyfill -->
@@ -39,6 +40,12 @@
 				}
 			}
 		</script>
+
+		<script>
+            function myFunction() {
+                window.ReactNativeWebView.postMessage("Hello!")
+            }
+        </script>
 
 		<script type="module">
 
